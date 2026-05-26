@@ -746,6 +746,10 @@ img {
     font-weight: 900;
 }
 
+.qv-social-btn {
+    cursor: pointer;
+}
+
 .qv-footer-desc {
     font-size: 13px;
     color: rgba(255, 255, 255, .68);
