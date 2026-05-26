@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qverse — Learning Portal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom styles (only what Bootstrap can't cover) -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg qv-navbar fixed-top py-3" id="mainNav">
+        <div class="container-xl px-4 px-lg-5">
+
+            <!-- Brand -->
+            <a class="navbar-brand qv-brand fw-black text-white" href="#home">Qverse</a>
+
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list text-white fs-4"></i>
+            </button>
+
+            <!-- Nav links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                <ul class="navbar-nav gap-lg-4 py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link qv-nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link qv-nav-link" href="#courses">Our Courses</a></li>
+                    <li class="nav-item"><a class="nav-link qv-nav-link" href="#business">Qverse for Business</a></li>
+                    <li class="nav-item"><a class="nav-link qv-nav-link" href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Icon buttons (hidden on mobile collapse) -->
+            <div class="d-none d-lg-flex gap-2 ms-3">
+                <button class="qv-icon-btn" aria-label="Search">
+                    <img src="./assets/images/Icons/Icon Search.png" alt="Search" width="28" height="28" />
+                </button>
+                <button class="qv-icon-btn" aria-label="User profile">
+                    <img src="./assets/images/Icons/Icon User.png" alt="User" width="28" height="28" />
+                </button>
+            </div>
+
+        </div>
+    </nav>
+    <!-- ===================== /NAVBAR ===================== -->
+
+
+    <!-- ===================== HERO ===================== -->
+    <section class="qv-hero d-flex align-items-center" id="home">
+        <!-- Decorative background slices -->
+        <img src="./assets/images/Rectangle-1.png" class="qv-hero__bg-img" alt="" aria-hidden="true" />
+        <img src="./assets/images/Group 14.png" class="qv-hero__deco" alt="" aria-hidden="true" />
+
+        <div class="container-xl px-4 px-lg-5 w-100">
+            <div class="row align-items-center g-5">
+
+                <!-- Left copy -->
+                <div class="col-lg-6">
+                    <h1 class="qv-hero__title fw-black text-white">
+                        Unlock Your Potential<br />
+                        with Our Learning Portal
+                    </h1>
+                    <p class="qv-hero__subtitle text-white-75 mb-5">
+                        Welcome to our comprehensive learning portal, where<br class="d-none d-md-inline" />
+                        knowledge meets opportunity.
+                    </p>
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <button class="btn qv-btn-primary rounded-pill px-4 py-3 fw-semibold">
+                            Register Now
+                        </button>
+                        <button class="btn qv-btn-ghost d-flex align-items-center gap-3 text-white">
+                            <span
+                                class="qv-play-btn d-flex align-items-center justify-content-center rounded-circle flex-shrink-0">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                    <path d="M3 2L13 8L3 14V2Z" fill="#FF6B35" />
+                                </svg>
+                            </span>
+                            Why is Business?
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right images (decorative collage) -->
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="qv-hero__img-wrap position-relative">
+                        <div class="qv-hero__front position-absolute">
+                            <img src="./assets/images/Image (1).png" alt="Student learning"
+                                class="w-100 h-100 object-fit-cover rounded-4 shadow" />
+                        </div>
+                        <div class="qv-hero__back position-absolute">
+                            <img src="./assets/images/Image (2).png" alt="Person with headphones"
+                                class="w-100 h-100 object-fit-cover rounded-4 shadow" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /HERO ===================== -->
+
+
+    <!-- ===================== WHY CHOOSE ===================== -->
+    <section class="qv-why py-5" id="why-choose">
+        <div class="container-xl px-4 px-lg-5">
+
+            <h2 class="qv-section-title text-white text-center fw-black">Why Choose Qverse?</h2>
+            <p class="qv-section-sub text-center mx-auto mb-5">
+                Choose us for a learning experience tailored to your success, with expert instructors and
+                flexible, engaging courses. Unleash your potential with our trusted, results-driven platform.
+            </p>
+
+            <div class="row g-4 align-items-center">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="qv-feature-card text-center p-4 p-xl-5">
+                        <div class="qv-feature-icon mx-auto mb-4">
+                            <img src="./assets/images/Icons/Group 8.png" alt="Daily Analysis" width="70" height="70" />
+                        </div>
+                        <h3 class="qv-feature-title text-white fw-bold">Daily Analysis</h3>
+                        <p class="qv-feature-desc">Stay ahead with our Daily Analysis. Get real-time insights to excel
+                            in your field.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 — highlighted -->
+                <div class="col-md-4">
+                    <div class="qv-feature-card qv-feature-card--highlight text-center py-5 px-4">
+                        <div class="qv-feature-icon mx-auto mb-4">
+                            <img src="./assets/images/Icons/Group 6.png" alt="Strategy" width="70" height="70" />
+                        </div>
+                        <h3 class="qv-feature-title text-white fw-bold">Strategy and Planning</h3>
+                        <p class="qv-feature-desc">Plan for success with our Strategy expertise.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="qv-feature-card text-center p-4 p-xl-5">
+                        <div class="qv-feature-icon mx-auto mb-4">
+                            <img src="./assets/images/Icons/Group 7.png" alt="Creative Solution" width="70"
+                                height="70" />
+                        </div>
+                        <h3 class="qv-feature-title text-white fw-bold">Creative Solution</h3>
+                        <p class="qv-feature-desc">Unlock creativity with our innovative solutions!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /WHY CHOOSE ===================== -->
+
+
+    <!-- ===================== BUSINESS LEARNING ===================== -->
+    <!--
+    Intentionally NO container here — original design is full-width.
+    Absolute image positions are calculated against 50vw columns,
+    so a max-width container would shift everything off.
+  -->
+    <section class="qv-business" id="business">
+
+        <!-- Block 1: text LEFT · images RIGHT -->
+        <div class="qv-biz-card">
+
+            <div class="qv-biz-content-wrap d-flex align-items-center">
+                <div class="qv-biz-content">
+                    <h2 class="qv-biz-title text-white fw-black">
+                        Help learn business more quickly and efficiently
+                    </h2>
+                    <p class="qv-biz-desc">
+                        Supercharge your business learning journey with our platform, designed to help you grasp
+                        complex concepts more quickly and efficiently. Our user-friendly interface and expert-crafted
+                        content make it easier than ever to acquire the knowledge and skills you need.
+                    </p>
+                    <a href="#" class="qv-biz-link fw-bold">See More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="qv-biz-img-col">
+                <div class="qv-biz-img position-relative">
+                    <img src="./assets/images/Vector 1.png" class="qv-biz-bg" alt="" aria-hidden="true" />
+                    <img src="./assets/images/Group 3 (1).png" class="qv-biz-deco" alt="" aria-hidden="true" />
+                    <img src="./assets/images/Image (3).png" class="qv-biz-person qv-biz-person--a"
+                        alt="Business person" />
+                    <img src="./assets/images/Image (4).png" class="qv-biz-person qv-biz-person--b"
+                        alt="Business person" />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Block 2: images LEFT · text RIGHT -->
+        <div class="qv-biz-card qv-biz-card--rev">
+
+            <div class="qv-biz-img-col">
+                <div class="qv-biz-img position-relative">
+                    <img src="./assets/images/Vector 2.png" class="qv-biz-bg-2" alt="" aria-hidden="true" />
+                    <img src="./assets/images/Group 14.png" class="qv-biz-deco1" alt="" aria-hidden="true" />
+                    <img src="./assets/images/3D00847 1.png" class="qv-biz-media" alt="Video content" />
+                </div>
+            </div>
+
+            <div class="qv-biz-content-wrap d-flex align-items-center">
+                <div class="qv-biz-content">
+                    <h2 class="qv-biz-title text-white fw-black">
+                        Growing business market is getting better
+                    </h2>
+                    <p class="qv-biz-desc">
+                        Seize the opportunity to thrive in a growing business market that's constantly improving.
+                        Our platform equips you with the skills and knowledge you need to stay ahead and make the
+                        most of these favorable conditions.
+                    </p>
+                    <a href="#" class="qv-biz-link fw-bold">See More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ===================== /BUSINESS LEARNING ===================== -->
+
+
+    <!-- ===================== POPULAR COURSES ===================== -->
+    <section class="qv-courses py-5" id="courses">
+        <div class="container-xl px-4 px-lg-5">
+
+            <h2 class="qv-section-title text-white text-center fw-black">Our Popular Courses</h2>
+            <p class="qv-section-sub text-center mx-auto mb-5">
+                Explore our popular courses and embark on a learning journey thousands trust.
+                Discover top-rated content, expert instructors, and start your path to success today.
+            </p>
+
+            <div class="row g-4">
+
+                <!-- Course 1 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="qv-course-card h-100 d-flex flex-column rounded-4 overflow-hidden">
+                        <div class="qv-course-img">
+                            <img src="./assets/images/Image (5).png" alt="Digital Marketing"
+                                class="w-100 h-100 object-fit-cover" />
+                        </div>
+                        <div class="qv-course-body d-flex flex-column flex-grow-1 p-4">
+                            <h3 class="qv-course-title text-white fw-bold">Digital Marketing Professional Certification
+                            </h3>
+                            <p class="qv-course-desc flex-grow-1">Digital Marketing Certification by The Retail Banking
+                                School and preparing for certification at other providers.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <button class="btn qv-course-btn rounded-pill d-flex align-items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 2L13 8L3 14V2Z" fill="white" />
+                                    </svg>
+                                    15x lesson
+                                </button>
+                                <div class="text-end">
+                                    <div class="qv-members-count">1,000+</div>
+                                    <div class="qv-members-label">Join members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="qv-course-card h-100 d-flex flex-column rounded-4 overflow-hidden">
+                        <div class="qv-course-img">
+                            <img src="./assets/images/Placeholder.png" alt="Copywriting"
+                                class="w-100 h-100 object-fit-cover" />
+                        </div>
+                        <div class="qv-course-body d-flex flex-column flex-grow-1 p-4">
+                            <h3 class="qv-course-title text-white fw-bold">Professional Diploma in Copywriting and
+                                Business Writing</h3>
+                            <p class="qv-course-desc flex-grow-1">Copywriting, Content Writing, Content Marketing, SEO,
+                                Writing, Business writing, Career and Freelance strategy.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <button class="btn qv-course-btn rounded-pill d-flex align-items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 2L13 8L3 14V2Z" fill="white" />
+                                    </svg>
+                                    15x lesson
+                                </button>
+                                <div class="text-end">
+                                    <div class="qv-members-count">2,500+</div>
+                                    <div class="qv-members-label">Join Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="col-md-6 col-xl-4">
+                    <div class="qv-course-card h-100 d-flex flex-column rounded-4 overflow-hidden">
+                        <div class="qv-course-img">
+                            <img src="./assets/images/Image (6).png" alt="UX Design"
+                                class="w-100 h-100 object-fit-cover" />
+                        </div>
+                        <div class="qv-course-body d-flex flex-column flex-grow-1 p-4">
+                            <h3 class="qv-course-title text-white fw-bold">User Experience Design — Adobe XD UI/UX
+                                Design</h3>
+                            <p class="qv-course-desc flex-grow-1">Use XD to get a job in UI Design, User Interface, User
+                                Experience design, UX design & Web Design.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <button class="btn qv-course-btn rounded-pill d-flex align-items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 2L13 8L3 14V2Z" fill="white" />
+                                    </svg>
+                                    15x lesson
+                                </button>
+                                <div class="text-end">
+                                    <div class="qv-members-count">3,200+</div>
+                                    <div class="qv-members-label">Join Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /POPULAR COURSES ===================== -->
+
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="qv-pricing py-5" id="pricing">
+        <div class="container-xl px-4 px-lg-5">
+
+            <div class="text-center mb-5">
+                <h2 class="qv-section-title text-white fw-black">Choose your plan</h2>
+                <p class="qv-section-sub mx-auto">
+                    Select the perfect plan that fits your goals. Whether you're an individual learner or a corporate
+                    team, we have options tailored to your needs.
+                </p>
+            </div>
+
+            <!-- Cards row — featured card breaks out with negative margin on lg+ -->
+            <div class="row g-4 align-items-center justify-content-center qv-pricing-row">
+
+                <!-- Regular -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="qv-plan-card p-4 p-xl-5 rounded-4 h-100 d-flex flex-column">
+                        <div class="qv-plan-icon mb-4">
+                            <img src="./assets/images/Icons/Group 30.png" alt="Regular plan" width="65" height="65" />
+                        </div>
+                        <h3 class="qv-plan-name text-white fw-black">Regular</h3>
+                        <p class="qv-plan-desc flex-grow-1">
+                            Ideal for individuals. Our Regular Plan is perfect for learners seeking professional
+                            development without breaking the bank. Easy access to a wide range of courses and our
+                            learning community.
+                        </p>
+                        <div class="qv-plan-price text-white fw-black mt-3">$60.00</div>
+                    </div>
+                </div>
+
+                <!-- Agency — featured -->
+                <div class="col-lg-4 col-md-6 qv-plan-featured-col">
+                    <div
+                        class="qv-plan-card qv-plan-card--featured position-relative rounded-4 p-4 p-xl-5 d-flex flex-column">
+                        <img src="./assets/images/Rectangle 9.png" class="qv-plan-bg-img" alt="" aria-hidden="true" />
+                        <div class="position-relative" style="z-index:1;">
+                            <div class="qv-plan-icon mb-4">
+                                <img src="./assets/images/Icons/Group 31.png" alt="Agency plan" width="65"
+                                    height="65" />
+                            </div>
+                            <h3 class="qv-plan-name text-white fw-black">Agency</h3>
+                            <p class="qv-plan-desc text-white flex-grow-1">
+                                Boost your team's skills. The Agency Plan is tailored for businesses looking to upskill
+                                their teams with comprehensive training, progress tracking, and certification features.
+                            </p>
+                            <div class="qv-plan-price text-white fw-black mt-3">$100.00</div>
+                        </div>
+                        <!-- Join button sits at card bottom -->
+                        <button class="btn qv-btn-join rounded-pill fw-bold mt-4 align-self-center"
+                            style="position:relative;z-index:1;">
+                            Join Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Private -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="qv-plan-card p-4 p-xl-5 rounded-4 h-100 d-flex flex-column">
+                        <div class="qv-plan-icon mb-4">
+                            <img src="./assets/images/Icons/Group 32.png" alt="Private plan" width="65" height="65" />
+                        </div>
+                        <h3 class="qv-plan-name text-white fw-black">Private</h3>
+                        <p class="qv-plan-desc flex-grow-1">
+                            Customised learning. Our Private Plan offers a personalised experience. Tailor courses to
+                            your goals, collaborate with dedicated instructors, and receive premium one-on-one support.
+                        </p>
+                        <div class="qv-plan-price text-white fw-black mt-3">$200.00</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /PRICING ===================== -->
+
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="qv-testimonials py-5" id="testimonials">
+        <div class="container-xl px-4 px-lg-5">
+            <div class="row g-5 align-items-center">
+
+                <!-- Left heading -->
+                <div class="col-lg-4">
+                    <h2 class="qv-section-title text-white fw-black lh-sm">
+                        What<br />our clients say
+                    </h2>
+                    <p class="qv-testimonials-sub mt-3">
+                        Discover what our satisfied clients have to say about their experiences. Their testimonials
+                        speak volumes about the impact of our platform on their professional growth.
+                    </p>
+                </div>
+
+                <!-- Right scrollable track -->
+                <div class="col-lg-8 overflow-hidden">
+                    <div class="qv-t-track-wrap">
+                        <div class="qv-t-track d-flex gap-4" id="testimonialsTrack">
+
+                            <!-- Card 1 -->
+                            <div class="qv-t-card flex-shrink-0 rounded-4 p-4 d-flex flex-column gap-3">
+                                <div class="qv-t-quote"><i class="bi bi-quote"></i></div>
+                                <p class="qv-t-text flex-grow-1">
+                                    At in pellentesque integer netus enim purus. Tempor nulla porta pretium venenatis
+                                    sem
+                                    tellus duis. Rhoncus eu lectus interdum tellus pellentesque.
+                                </p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="./assets/images/client-images/narendra.png" alt="Narendra Gates"
+                                        class="qv-t-avatar rounded-circle object-fit-cover flex-shrink-0" />
+                                    <div>
+                                        <div class="qv-t-name fw-bold text-white">Narendra Gates</div>
+                                        <div class="qv-t-stars">
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--off"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="qv-t-card flex-shrink-0 rounded-4 p-4 d-flex flex-column gap-3">
+                                <div class="qv-t-quote"><i class="bi bi-quote"></i></div>
+                                <p class="qv-t-text flex-grow-1">
+                                    Eu lorem lobortis malesuada viverra penatibus vulputate sapien ipsum etiam in vitae.
+                                    Uma mi augue sit viverra.
+                                </p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="./assets/images/client-images/silvia.png" alt="Silvia Putriani"
+                                        class="qv-t-avatar rounded-circle object-fit-cover flex-shrink-0" />
+                                    <div>
+                                        <div class="qv-t-name fw-bold text-white">Silvia Putriani</div>
+                                        <div class="qv-t-stars">
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 (clone for visual peek) -->
+                            <div class="qv-t-card flex-shrink-0 rounded-4 p-4 d-flex flex-column gap-3">
+                                <div class="qv-t-quote"><i class="bi bi-quote"></i></div>
+                                <p class="qv-t-text flex-grow-1">
+                                    Morbi aliquam felis odio porttitor convallis. Nam accumsan augue est, ac lobortis
+                                    felis
+                                    volutpat sit amet. Excepteur sint occaecat cupidatat non proident.
+                                </p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="./assets/images/client-images/narendra.png" alt="Alex Johnson"
+                                        class="qv-t-avatar rounded-circle object-fit-cover flex-shrink-0" />
+                                    <div>
+                                        <div class="qv-t-name fw-bold text-white">Alex Johnson</div>
+                                        <div class="qv-t-stars">
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                            <i class="bi bi-star-fill qv-star--on"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /TESTIMONIALS ===================== -->
+
+
+    <!-- ===================== CTA BANNER ===================== -->
+    <section class="qv-cta pb-5 pt-2" id="blog">
+        <div class="container-xl px-4 px-lg-5">
+            <div class="qv-cta-banner text-center rounded-4 px-4 px-lg-5 py-5 position-relative overflow-hidden">
+                <h2 class="qv-cta-title text-white fw-black position-relative">Learning business for the future</h2>
+                <p class="qv-cta-sub mx-auto position-relative">
+                    Prepare for the future of business with our forward-thinking learning platform. Our courses
+                    equip you with the skills needed to excel in an ever-evolving corporate landscape. Stay ahead,
+                    learn today, lead tomorrow.
+                </p>
+                <button class="btn qv-btn-cta rounded-pill fw-bold px-5 py-3 position-relative">
+                    Register Now
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== /CTA BANNER ===================== -->
+
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="qv-footer pt-5 position-relative overflow-hidden">
+
+        <!-- decorative bg image -->
+        <img src="./assets/images/Rectangle-1-footer.png" class="qv-footer__bg" alt="" aria-hidden="true" />
+
+        <div class="container-xl px-4 px-lg-5 position-relative" style="z-index:1;">
+
+            <div class="row g-4 g-lg-5 pb-5">
+
+                <!-- Brand col -->
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="qv-footer-logo fw-black text-white mb-3">Qverse</div>
+                    <p class="qv-footer-desc">
+                        Discover a world of possibilities with our user-friendly interface, designed to provide a
+                        seamless and engaging learning experience.
+                    </p>
+                    <div class="mt-3">
+                        <img src="./assets/images/media.png" alt="Social links" style="max-width:140px;" />
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="qv-footer-heading">Links</h6>
+                    <ul class="list-unstyled qv-footer-links">
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="col-6 col-md-2">
+                    <h6 class="qv-footer-heading">Company</h6>
+                    <ul class="list-unstyled qv-footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Feature</a></li>
+                        <li><a href="#">Testimony</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="qv-footer-heading">Resources</h6>
+                    <ul class="list-unstyled qv-footer-links">
+                        <li><a href="#">Become a Teacher</a></li>
+                        <li><a href="#">Help Centre</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div
+                class="d-flex flex-column flex-sm-row align-items-center justify-content-between border-top border-white border-opacity-10 py-4 gap-3">
+                <span class="qv-footer-copy">© 2022 Qverse. All rights reserved.</span>
+                <div class="d-flex gap-4 flex-wrap justify-content-center">
+                    <a href="#" class="qv-footer-copy text-decoration-none">Courses</a>
+                    <a href="#" class="qv-footer-copy text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="qv-footer-copy text-decoration-none">Terms &amp; Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ===================== /FOOTER ===================== -->
+
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

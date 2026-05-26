@@ -1,0 +1,923 @@
+
+:root {
+    --clr-primary-s: #211E3C;
+    --clr-primary-m: #292B58;
+    --clr-secondary-s: #C5570A;
+    --clr-secondary-m: #EE7A2A;
+    --clr-secondary-h: #FFF8F3;
+    --clr-accent-m: #C849A7;
+    --grad-secondary: linear-gradient(90deg, #FEBA4F 0%, #FD5E37 100%);
+    --grad-primary: linear-gradient(135deg, #B71A8E 0%, #434691 57%, #211E3C 100%);
+    --clr-text-200: #FFFFFF;
+    --clr-text-400: #F9F9F9;
+    --ff-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, .30);
+    --shadow-orange: 0 12px 48px rgba(238, 122, 42, .38);
+}
+
+/* ── Base ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--ff-body);
+    background-color: var(--clr-primary-s);
+    color: var(--clr-text-400);
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ── Navbar ── */
+.qv-navbar {
+    background: transparent !important;
+    transition: backdrop-filter .3s ease;
+}
+
+.qv-navbar.scrolled {
+    backdrop-filter: blur(10px);
+}
+
+.qv-brand {
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* Nav links */
+.qv-nav-link {
+    color: rgba(255, 255, 255, .85) !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    position: relative;
+    transition: color .3s;
+}
+
+.qv-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--grad-secondary);
+    transform: translateX(-50%);
+    transition: width .35s ease;
+}
+
+.qv-nav-link:hover,
+.qv-nav-link.active {
+    color: var(--clr-text-200) !important;
+}
+
+.qv-nav-link:hover::after,
+.qv-nav-link.active::after {
+    width: 100%;
+}
+
+/* Icon buttons */
+.qv-icon-btn {
+    background: none;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.qv-icon-btn:hover {
+    transform: translateY(-4px);
+}
+
+.qv-icon-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+/* ── Hero ── */
+.qv-hero {
+    min-height: 100vh;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Purple background slice top-left */
+.qv-hero__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Small decorative group bottom-left */
+.qv-hero__deco {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 22%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.qv-hero .container-xl {
+    position: relative;
+    z-index: 1;
+}
+
+.qv-hero__title {
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.qv-hero__subtitle {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: rgba(255, 255, 255, .85);
+}
+
+/* Primary CTA */
+.qv-btn-primary {
+    background: var(--grad-secondary);
+    color: var(--clr-text-200);
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.qv-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-orange);
+    color: var(--clr-text-200);
+}
+
+/* Ghost "play" button */
+.qv-btn-ghost {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.qv-play-btn {
+    width: 48px;
+    height: 48px;
+    background: var(--clr-text-200);
+    box-shadow: 0 4px 12px rgba(255, 154, 4, .30);
+    flex-shrink: 0;
+}
+
+/* Hero image collage */
+.qv-hero__img-wrap {
+    height: 580px;
+}
+
+.qv-hero__front {
+    top: 0;
+    right: 32%;
+    width: 400px;
+    height: 505px;
+    z-index: 2;
+}
+
+.qv-hero__back {
+    top: 14%;
+    right: 4%;
+    width: 400px;
+    height: 505px;
+    z-index: 1;
+}
+
+.qv-hero__front img,
+.qv-hero__back img {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+
+/* ── Why Choose ── */
+.qv-why {
+    background-color: var(--clr-primary-m);
+    padding: 80px 0;
+}
+
+.qv-section-title {
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+.qv-section-sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, .72);
+    max-width: 780px;
+    line-height: 1.75;
+}
+
+.qv-feature-card {
+    transition: transform .3s;
+}
+
+.qv-feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Middle card uses a background image */
+.qv-feature-card--highlight {
+    background-image: url('../images/Rectangle\ 9\ \(1\).png');
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    background-position: center;
+}
+
+.qv-feature-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qv-feature-title {
+    font-size: 22px;
+}
+
+.qv-feature-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .72);
+}
+
+
+.qv-business {
+    background-color: var(--clr-primary-s);
+    padding: 80px 0;
+}
+
+/* Each row = full-width two-column grid, gap-free */
+.qv-biz-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.qv-biz-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Reversed card: image on left, text on right */
+.qv-biz-card--rev .qv-biz-content-wrap {
+    order: 2;
+}
+
+.qv-biz-card--rev .qv-biz-img-col {
+    order: 1;
+}
+
+/* Text column — padded like the original */
+.qv-biz-content-wrap {
+    padding: 0 50px;
+}
+
+.qv-biz-content {
+    max-width: 600px;
+}
+
+.qv-biz-title {
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.3;
+}
+
+.qv-biz-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .85);
+}
+
+.qv-biz-link {
+    color: var(--clr-secondary-m);
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap .3s, transform .3s;
+    position: relative;
+}
+
+.qv-biz-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--clr-secondary-m);
+    transition: width .3s;
+}
+
+.qv-biz-link:hover {
+    transform: translateX(5px);
+    gap: 14px;
+}
+
+.qv-biz-link:hover::after {
+    width: calc(100% - 1.4rem);
+}
+
+/* Image column — must allow overflow for intentional bleed */
+.qv-biz-img-col {
+    overflow: visible;
+}
+
+/* Inner wrapper — fixed height, relative anchor for abs children */
+.qv-biz-img {
+    height: 450px;
+    width: 100%;
+    overflow: visible;
+    /* person-b bleeds below intentionally */
+}
+
+/* ---- Block 1 image assets ---- */
+.qv-biz-bg {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+    top: -10%;
+    left: 10%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Small floating decoration (bottom-right corner) */
+.qv-biz-deco {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    top: 60%;
+    left: 50%;
+    z-index: 11;
+    pointer-events: none;
+}
+
+/* Person photo A — square, floats upper-right of blob */
+.qv-biz-person {
+    position: absolute;
+    border-radius: 12px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.qv-biz-person--a {
+    top: 65%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    width: 299px;
+    height: 299px;
+}
+
+/* Person photo B — bleeds below the section into the next (original behaviour) */
+.qv-biz-person--b {
+    top: 65%;
+    left: 20%;
+    width: 447px;
+    height: 299px;
+}
+
+/* ---- Block 2 image assets ---- */
+.qv-biz-bg-2 {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+    top: -10%;
+    left: -5%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.qv-biz-deco1 {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 35%;
+    left: 7%;
+    object-fit: contain;
+    z-index: 11;
+    pointer-events: none;
+}
+
+.qv-biz-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 910px;
+    height: 423px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+
+/* ── Popular Courses ── */
+.qv-courses {
+    background-color: var(--clr-primary-m);
+}
+
+.qv-course-card {
+    background: rgba(255, 255, 255, .08);
+    transition: transform .4s, background .4s, box-shadow .4s;
+}
+
+.qv-course-card:hover {
+    transform: translateY(-14px);
+    background: rgba(255, 255, 255, .12);
+    box-shadow: 0 20px 40px rgba(238, 122, 42, .28);
+}
+
+.qv-course-img {
+    height: 220px;
+    overflow: hidden;
+}
+
+.qv-course-img img {
+    transition: transform .4s;
+}
+
+.qv-course-card:hover .qv-course-img img {
+    transform: scale(1.08);
+}
+
+.qv-course-title {
+    font-size: 20px;
+    line-height: 1.35;
+    min-height: 56px;
+    transition: color .3s;
+}
+
+.qv-course-card:hover .qv-course-title {
+    color: var(--clr-secondary-m);
+}
+
+.qv-course-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .68);
+    line-height: 1.7;
+}
+
+.qv-course-btn {
+    background: var(--grad-primary);
+    color: var(--clr-text-200);
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.qv-course-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 20px rgba(183, 26, 142, .4);
+    color: var(--clr-text-200);
+}
+
+.qv-members-count {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-secondary-m);
+    line-height: 1;
+}
+
+.qv-members-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+}
+
+
+/* ── Pricing ── */
+.qv-pricing {
+    background-color: var(--clr-primary-m);
+}
+
+.qv-plan-card {
+    background-color: var(--clr-primary-s);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.qv-plan-card:hover:not(.qv-plan-card--featured) {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .28);
+}
+
+/* Featured card stretches vertically */
+.qv-plan-card--featured {
+    background: transparent;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .qv-plan-featured-col {
+        margin-top: -60px;
+        margin-bottom: -40px;
+    }
+}
+
+.qv-plan-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.qv-plan-name {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 900;
+}
+
+.qv-plan-desc {
+    font-size: 14px;
+    color: rgba(249, 249, 249, .72);
+    line-height: 1.75;
+}
+
+.qv-plan-price {
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.qv-btn-join {
+    background-color: var(--clr-primary-s);
+    color: var(--clr-text-200);
+    border: none;
+    padding: 14px 48px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: transform .3s, box-shadow .3s;
+    font-family: var(--ff-body);
+}
+
+.qv-btn-join:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .45);
+    color: var(--clr-text-200);
+}
+
+
+/* ── Testimonials ── */
+.qv-testimonials {
+    background-color: var(--clr-primary-s);
+}
+
+.qv-testimonials-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .62);
+    line-height: 1.8;
+}
+
+/* Overflow-hidden on parent + overflow-visible on wrapper = peek effect */
+.qv-t-track-wrap {
+    overflow: visible;
+}
+
+.qv-t-track {
+    transition: transform .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.qv-t-card {
+    background-color: var(--clr-primary-m);
+    width: 280px;
+    transition: transform .3s;
+}
+
+.qv-t-card:hover {
+    transform: translateY(-6px);
+}
+
+.qv-t-quote {
+    font-size: 52px;
+    color: var(--clr-secondary-m);
+    line-height: .8;
+    font-family: Georgia, serif;
+}
+
+.qv-t-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .78);
+    line-height: 1.75;
+}
+
+.qv-t-avatar {
+    width: 46px;
+    height: 46px;
+}
+
+.qv-t-name {
+    font-size: 13px;
+}
+
+.qv-star--on {
+    color: #FEBA4F;
+    font-size: 12px;
+}
+
+.qv-star--off {
+    color: rgba(255, 255, 255, .25);
+    font-size: 12px;
+}
+
+
+/* ── CTA ── */
+.qv-cta-banner {
+    background: var(--grad-secondary);
+}
+
+/* Subtle circle decorations using pseudo-elements */
+.qv-cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .07);
+    pointer-events: none;
+}
+
+.qv-cta-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .05);
+    pointer-events: none;
+}
+
+.qv-cta-title {
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 900;
+}
+
+.qv-cta-sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, .85);
+    max-width: 560px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.qv-btn-cta {
+    background-color: var(--clr-primary-s);
+    color: var(--clr-text-200);
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--ff-body);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.qv-btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(33, 30, 60, .55);
+    color: var(--clr-text-200);
+}
+
+
+/* ── Footer ── */
+.qv-footer {
+    background-color: var(--clr-primary-s);
+    padding-top: 80px;
+}
+
+.qv-footer__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.qv-footer-logo {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.qv-footer-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .68);
+    line-height: 1.85;
+    max-width: 260px;
+}
+
+.qv-footer-heading {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: var(--clr-text-200);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.qv-footer-links li {
+    margin-bottom: .75rem;
+}
+
+.qv-footer-links a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .62);
+    text-decoration: none;
+    transition: color .3s, transform .3s;
+    display: inline-block;
+}
+
+.qv-footer-links a:hover {
+    color: var(--clr-text-200);
+    transform: translateX(4px);
+}
+
+.qv-footer-copy {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .42);
+}
+
+
+/* ══════════════════════════════════════
+   Responsive tweaks
+   Bootstrap grid handles columns.
+   These cover section-specific edge cases.
+   ══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .qv-hero__front {
+        width: 340px;
+        height: 430px;
+        right: 28%;
+    }
+
+    .qv-hero__back {
+        width: 340px;
+        height: 430px;
+        right: 2%;
+    }
+
+    /* Business: tighten the fixed-pixel images a touch */
+    .qv-biz-person--a {
+        width: 240px;
+        height: 240px;
+    }
+
+    .qv-biz-person--b {
+        width: 360px;
+        height: 240px;
+    }
+
+    .qv-biz-media {
+        width: 700px;
+        height: auto;
+    }
+
+    .qv-biz-content-wrap {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    /* Hero — text only, no image collage */
+    .qv-hero {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+
+    .qv-hero__bg-img {
+        width: 100%;
+        opacity: .45;
+    }
+
+    /* Business — stack vertically */
+    .qv-biz-card,
+    .qv-biz-card--rev {
+        grid-template-columns: 1fr;
+    }
+
+    /* Always: image on top, text below — clear the reverse order */
+    .qv-biz-card--rev .qv-biz-content-wrap {
+        order: 2;
+    }
+
+    .qv-biz-card--rev .qv-biz-img-col {
+        order: 1;
+    }
+
+    .qv-biz-img {
+        height: 320px;
+    }
+
+    /* Bleed image hides cleanly on mobile */
+    .qv-biz-person--b {
+        display: none;
+    }
+
+    .qv-biz-media {
+        width: 100%;
+        height: auto;
+    }
+
+    .qv-biz-content-wrap {
+        padding: 30px 40px;
+    }
+
+    .qv-biz-card {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .qv-why {
+        padding: 60px 0;
+    }
+
+    .qv-t-card {
+        width: 260px;
+    }
+
+    .qv-cta-banner {
+        padding: 40px 24px;
+    }
+
+    .qv-footer-desc {
+        max-width: 100%;
+    }
+
+    .qv-biz-img {
+        height: 260px;
+    }
+
+    .qv-biz-content-wrap {
+        padding: 20px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qv-hero__title {
+        font-size: 28px;
+    }
+
+    .qv-hero__subtitle {
+        font-size: 13px;
+    }
+
+    .qv-btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .qv-plan-card {
+        padding: 1.5rem !important;
+    }
+}
