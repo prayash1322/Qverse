@@ -1,4 +1,3 @@
-
 :root {
     --clr-primary-s: #211E3C;
     --clr-primary-m: #292B58;
@@ -15,7 +14,7 @@
     --shadow-orange: 0 12px 48px rgba(238, 122, 42, .38);
 }
 
-/* ── Base ── */
+
 *,
 *::before,
 *::after {
@@ -48,7 +47,7 @@ img {
 }
 
 
-/* ── Navbar ── */
+
 .qv-navbar {
     background: transparent !important;
     transition: backdrop-filter .3s ease;
@@ -64,7 +63,7 @@ img {
     text-decoration: none;
 }
 
-/* Nav links */
+
 .qv-nav-link {
     color: rgba(255, 255, 255, .85) !important;
     font-size: 12px;
@@ -98,7 +97,7 @@ img {
     width: 100%;
 }
 
-/* Icon buttons */
+
 .qv-icon-btn {
     background: none;
     border: none;
@@ -123,7 +122,7 @@ img {
 }
 
 
-/* ── Hero ── */
+
 .qv-hero {
     min-height: 100vh;
     padding-top: 90px;
@@ -131,7 +130,7 @@ img {
     overflow: hidden;
 }
 
-/* Purple background slice top-left */
+
 .qv-hero__bg-img {
     position: absolute;
     top: 0;
@@ -141,7 +140,7 @@ img {
     pointer-events: none;
 }
 
-/* Small decorative group bottom-left */
+
 .qv-hero__deco {
     position: absolute;
     top: 55%;
@@ -167,7 +166,7 @@ img {
     color: rgba(255, 255, 255, .85);
 }
 
-/* Primary CTA */
+
 .qv-btn-primary {
     background: var(--grad-secondary);
     color: var(--clr-text-200);
@@ -183,7 +182,7 @@ img {
     color: var(--clr-text-200);
 }
 
-/* Ghost "play" button */
+
 .qv-btn-ghost {
     background: none;
     border: none;
@@ -199,7 +198,7 @@ img {
     flex-shrink: 0;
 }
 
-/* Hero image collage */
+
 .qv-hero__img-wrap {
     height: 580px;
 }
@@ -226,7 +225,7 @@ img {
 }
 
 
-/* ── Why Choose ── */
+
 .qv-why {
     background-color: var(--clr-primary-m);
     padding: 80px 0;
@@ -251,7 +250,7 @@ img {
     transform: translateY(-10px);
 }
 
-/* Middle card uses a background image */
+
 .qv-feature-card--highlight {
     background-image: url('../images/Rectangle\ 9\ \(1\).png');
     background-size: cover;
@@ -284,7 +283,7 @@ img {
     padding: 80px 0;
 }
 
-/* Each row = full-width two-column grid, gap-free */
+
 .qv-biz-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -297,7 +296,7 @@ img {
     margin-bottom: 0;
 }
 
-/* Reversed card: image on left, text on right */
+
 .qv-biz-card--rev .qv-biz-content-wrap {
     order: 2;
 }
@@ -306,7 +305,7 @@ img {
     order: 1;
 }
 
-/* Text column — padded like the original */
+
 .qv-biz-content-wrap {
     padding: 0 50px;
 }
@@ -357,20 +356,20 @@ img {
     width: calc(100% - 1.4rem);
 }
 
-/* Image column — must allow overflow for intentional bleed */
+
 .qv-biz-img-col {
     overflow: visible;
 }
 
-/* Inner wrapper — fixed height, relative anchor for abs children */
+
 .qv-biz-img {
     height: 450px;
     width: 100%;
     overflow: visible;
-    /* person-b bleeds below intentionally */
+
 }
 
-/* ---- Block 1 image assets ---- */
+
 .qv-biz-bg {
     position: absolute;
     width: 120%;
@@ -382,7 +381,7 @@ img {
     pointer-events: none;
 }
 
-/* Small floating decoration (bottom-right corner) */
+
 .qv-biz-deco {
     position: absolute;
     width: 50%;
@@ -394,7 +393,7 @@ img {
     pointer-events: none;
 }
 
-/* Person photo A — square, floats upper-right of blob */
+
 .qv-biz-person {
     position: absolute;
     border-radius: 12px;
@@ -410,7 +409,7 @@ img {
     height: 299px;
 }
 
-/* Person photo B — bleeds below the section into the next (original behaviour) */
+
 .qv-biz-person--b {
     top: 65%;
     left: 20%;
@@ -418,7 +417,7 @@ img {
     height: 299px;
 }
 
-/* ---- Block 2 image assets ---- */
+
 .qv-biz-bg-2 {
     position: absolute;
     width: 120%;
@@ -453,7 +452,7 @@ img {
 }
 
 
-/* ── Popular Courses ── */
+
 .qv-courses {
     background-color: var(--clr-primary-m);
 }
@@ -527,7 +526,7 @@ img {
 }
 
 
-/* ── Pricing ── */
+
 .qv-pricing {
     background-color: var(--clr-primary-m);
 }
@@ -542,7 +541,7 @@ img {
     box-shadow: 0 24px 60px rgba(0, 0, 0, .28);
 }
 
-/* Featured card stretches vertically */
+
 .qv-plan-card--featured {
     background: transparent;
     overflow: hidden;
@@ -600,7 +599,7 @@ img {
 }
 
 
-/* ── Testimonials ── */
+
 .qv-testimonials {
     background-color: var(--clr-primary-s);
 }
@@ -611,7 +610,7 @@ img {
     line-height: 1.8;
 }
 
-/* Overflow-hidden on parent + overflow-visible on wrapper = peek effect */
+
 .qv-t-track-wrap {
     overflow: visible;
 }
@@ -663,12 +662,12 @@ img {
 }
 
 
-/* ── CTA ── */
+
 .qv-cta-banner {
     background: var(--grad-secondary);
 }
 
-/* Subtle circle decorations using pseudo-elements */
+
 .qv-cta-banner::before {
     content: '';
     position: absolute;
@@ -723,7 +722,7 @@ img {
 }
 
 
-/* ── Footer ── */
+
 .qv-footer {
     background-color: var(--clr-primary-s);
     padding-top: 80px;
@@ -789,12 +788,6 @@ img {
 }
 
 
-/* ══════════════════════════════════════
-   Responsive tweaks
-   Bootstrap grid handles columns.
-   These cover section-specific edge cases.
-   ══════════════════════════════════════ */
-
 @media (max-width: 1024px) {
     .qv-hero__front {
         width: 340px;
@@ -808,7 +801,7 @@ img {
         right: 2%;
     }
 
-    /* Business: tighten the fixed-pixel images a touch */
+
     .qv-biz-person--a {
         width: 240px;
         height: 240px;
@@ -831,7 +824,7 @@ img {
 
 @media (max-width: 991px) {
 
-    /* Hero — text only, no image collage */
+
     .qv-hero {
         min-height: auto;
         padding-top: 110px;
@@ -843,13 +836,13 @@ img {
         opacity: .45;
     }
 
-    /* Business — stack vertically */
+
     .qv-biz-card,
     .qv-biz-card--rev {
         grid-template-columns: 1fr;
     }
 
-    /* Always: image on top, text below — clear the reverse order */
+
     .qv-biz-card--rev .qv-biz-content-wrap {
         order: 2;
     }
@@ -862,7 +855,7 @@ img {
         height: 320px;
     }
 
-    /* Bleed image hides cleanly on mobile */
+
     .qv-biz-person--b {
         display: none;
     }

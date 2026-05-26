@@ -1,8 +1,4 @@
-/* ==========================================================
-   Qverse — script.js
-   Kept lean: navbar blur on scroll + smooth scroll + active
-   nav link highlight based on scroll position.
-   ========================================================== */
+
 
 (function () {
   'use strict';
@@ -10,12 +6,12 @@
   const nav   = document.getElementById('mainNav');
   const links = document.querySelectorAll('.qv-nav-link');
 
-  /* ── Navbar blur on scroll ── */
+  
   function handleNavScroll() {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   }
 
-  /* ── Smooth scroll for in-page links ── */
+  
   links.forEach(link => {
     link.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -26,7 +22,7 @@
 
       e.preventDefault();
 
-      // Close mobile menu if open
+      
       const bsCollapse = bootstrap.Collapse.getInstance(
         document.getElementById('navMenu')
       );
@@ -36,7 +32,7 @@
     });
   });
 
-  /* ── Active link highlight via IntersectionObserver ── */
+  
   const sections = document.querySelectorAll('section[id], footer[id]');
 
   const observer = new IntersectionObserver(
@@ -56,8 +52,8 @@
 
   sections.forEach(s => observer.observe(s));
 
-  /* ── Bind scroll listener ── */
+  
   window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll(); // run once on load in case page is mid-scroll
+  handleNavScroll(); 
 
 })();
